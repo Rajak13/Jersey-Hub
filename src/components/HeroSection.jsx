@@ -1,10 +1,11 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { SPORTS_CONFIG as FALLBACK_SPORTS } from '../data/sportsData';
 
 export default function HeroSection({ activeSport, sportsCatalog, onSelectSport, onExploreClick }) {
   const catalog = sportsCatalog || FALLBACK_SPORTS;
   const currentSport = catalog[activeSport] || catalog.football || FALLBACK_SPORTS.football;
+
+  const sportKeys = Object.keys(catalog);
 
   return (
     <section className="w-full grid grid-cols-1 lg:grid-cols-[480px_1fr] xl:grid-cols-[520px_1fr] gap-8 lg:gap-10 items-start pt-2 pb-8 sm:pb-12 px-2 sm:px-4 md:px-6 relative z-10 font-body">
@@ -36,7 +37,7 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
           </p>
 
           {/* CTA Button */}
-          <div className="mb-6 sm:mb-0">
+          <div className="mb-6 sm:mb-0 flex flex-wrap items-center gap-3">
             <button
               type="button"
               onClick={onExploreClick}
@@ -46,7 +47,9 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
                 Explore collection
               </span>
               <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-200 group-hover:rotate-45">
-                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={2} />
+                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
               </span>
             </button>
           </div>
@@ -86,11 +89,10 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
 
       </div>
 
-      {/* ============ RIGHT HERO VISUAL (LOCKED TO SVG VIEWBOX RATIO) ============ */}
+      {/* ============ RIGHT HERO VISUAL (VIEWBOX-LOCKED MATHEMATICAL VECTOR) ============ */}
       <div className="w-full flex items-start justify-center lg:justify-end mt-4 lg:mt-0">
-        <div className="relative w-full max-w-[780px] aspect-[780/828] select-none shrink-0 overflow-hidden">
+        <div className="relative w-full max-w-[780px] aspect-[780/828] select-none shrink-0">
           
-          {/* SVG Frame with Exact Boolean Subtract Mask from Figma */}
           <svg 
             className="w-full h-full block" 
             viewBox="0 0 780 828" 
@@ -98,15 +100,26 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
+              {/* Main Figma Boolean Subtract Cutout Mask */}
               <clipPath id="figmaHeroClip">
                 <path d="M630.846 0C650.374 0 664 27.9729 664 47.5C664 84.7792 694.221 115 731.5 115C751.187 115 780 128.877 780 148.564V766C780 800.242 752.242 828 718 828H182C147.758 828 120 800.242 120 766V572C120 538.863 93.1371 512 60 512C26.8629 512 0 485.137 0 452V62C0 27.7583 27.7584 0 62 0H630.846Z" />
               </clipPath>
+
+              {/* ClipPaths for 3 Sport Selector Balls (ViewBox Locked) */}
+              <clipPath id="ballClip0">
+                <circle cx="60" cy="554" r="38" />
+              </clipPath>
+              <clipPath id="ballClip1">
+                <circle cx="60" cy="642" r="38" />
+              </clipPath>
+              <clipPath id="ballClip2">
+                <circle cx="60" cy="730" r="38" />
+              </clipPath>
             </defs>
 
+            {/* 1. Main Hero Image Masked inside Figma Vector Shape */}
             <g clipPath="url(#figmaHeroClip)">
               <rect width="780" height="828" fill="#E8E7E4" />
-              
-              {/* Stacked Images for Seamless Crossfade */}
               {Object.keys(catalog).map((sportKey) => {
                 const isCurrent = activeSport === sportKey;
                 return (
@@ -126,50 +139,70 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
                 );
               })}
             </g>
-          </svg>
 
-          {/* Top-Right Arrow Circle (Anchored to SVG top-right corner) */}
-          <button 
-            type="button"
-            onClick={onExploreClick}
-            className="absolute top-0 right-0 w-[10%] min-w-[36px] max-w-[90px] aspect-square rounded-full bg-white flex items-center justify-center z-20 transition-transform duration-200 hover:rotate-45 cursor-pointer group border border-black/[0.06] shadow-xs"
-            aria-label="View Collection"
-          >
-            <ArrowUpRight className="w-1/2 h-1/2 text-[#1A1A1A]" strokeWidth={1.8} />
-          </button>
+            {/* 2. Top-Right Arrow Circle (ViewBox Locked in Top Notch) */}
+            <g 
+              onClick={onExploreClick} 
+              className="cursor-pointer transition-transform hover:scale-105"
+              style={{ transformOrigin: '730px 52px' }}
+            >
+              <circle cx="730" cy="52" r="44" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" strokeWidth="2" />
+              <path 
+                d="M718 64L742 40M742 40H722M742 40V60" 
+                stroke="#1A1A1A" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+              />
+            </g>
 
-          {/* Lower-Left Sport Selector Balls (Anchored precisely to the 3 Figma carved notch holes at bottom left!) */}
-          <div 
-            className="absolute left-[1.5%] bottom-[3.5%] flex flex-col gap-[2%] z-20"
-            role="tablist"
-            aria-label="Choose Sport Category"
-          >
-            {Object.keys(catalog).map((sportKey) => {
+            {/* 3. Lower-Left 3 Sport Selector Balls (Mathematically ViewBox Locked in Notch) */}
+            {sportKeys.map((sportKey, idx) => {
               const sport = catalog[sportKey];
               const isActive = activeSport === sportKey;
+              const cy = 554 + idx * 88; // 554, 642, 730
+              const clipId = `url(#ballClip${idx})`;
+
               return (
-                <button
+                <g 
                   key={sportKey}
-                  type="button"
                   onClick={() => onSelectSport(sportKey)}
-                  className={`w-[11.5vw] max-w-[80px] min-w-[32px] aspect-square rounded-full overflow-hidden border-[2px] sm:border-[3px] transition-all duration-200 cursor-pointer shadow-xs ${
-                    isActive 
-                      ? 'border-[#1A1A1A] scale-105 opacity-100 ring-2 ring-white/80' 
-                      : 'border-transparent opacity-75 hover:opacity-100'
-                  }`}
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-label={`${sport.name} jerseys`}
+                  className="cursor-pointer"
+                  style={{ opacity: isActive ? 1 : 0.8 }}
                 >
-                  <img 
-                    src={sport.ballImage} 
-                    alt={sport.name} 
-                    className="w-full h-full object-cover"
+                  {/* Outer Active Ring */}
+                  <circle 
+                    cx="60" 
+                    cy={cy} 
+                    r="40" 
+                    fill="none" 
+                    stroke={isActive ? '#1A1A1A' : 'transparent'} 
+                    strokeWidth="4" 
                   />
-                </button>
+                  {/* Ball Photo clipped in exact circle */}
+                  <image
+                    href={sport.ballImage}
+                    x="22"
+                    y={cy - 38}
+                    width="76"
+                    height="76"
+                    preserveAspectRatio="xMidYMid slice"
+                    clipPath={clipId}
+                  />
+                  {/* White Border Ring */}
+                  <circle 
+                    cx="60" 
+                    cy={cy} 
+                    r="38" 
+                    fill="none" 
+                    stroke="#FFFFFF" 
+                    strokeWidth="3" 
+                  />
+                </g>
               );
             })}
-          </div>
+
+          </svg>
 
         </div>
       </div>
