@@ -1,5 +1,6 @@
 // ==========================================================
 // Jersey Hub Nepal — Master Catalog Data & Store Config
+// Optimized for High Speed CDN Delivery (Sub-Second Vercel Load)
 // ==========================================================
 
 export const RETRO_ARCHIVES = [
@@ -18,7 +19,7 @@ export const RETRO_ARCHIVES = [
     era: '1998 World Cup',
     price: 2650,
     tag: 'Archive',
-    image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=75',
     story: 'Two headers in Saint-Denis made Zizou immortal. The kit that defined a generation.'
   },
   {
@@ -27,7 +28,7 @@ export const RETRO_ARCHIVES = [
     era: 'Concept Series',
     price: 2550,
     tag: 'Drop',
-    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=75',
     story: 'Japanese mythological dragon meets modern football tailoring. Gold foil sublimated embroidery.'
   }
 ];
@@ -46,7 +47,7 @@ export const COMMUNITY_POSTS = [
     name: 'Prashant Thapa',
     location: 'Pokhara',
     kit: 'Nepal Rhinos T20 Kit',
-    image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=75',
     review: 'Custom name printing for Dipendra 14 is razor sharp. Wore it during the World Cup watch party!'
   },
   {
@@ -62,7 +63,7 @@ export const COMMUNITY_POSTS = [
     name: 'Kritika Gurung',
     location: 'Butwal',
     kit: 'Real Madrid Mbappé #9',
-    image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=75',
     review: 'Delivered to Butwal via express courier in 2 days. Sizing is spot on and the badges are pristine.'
   }
 ];
@@ -73,7 +74,7 @@ export const LAB_KITS = [
     name: 'Nepal National Team 2024',
     category: 'National Pride',
     basePrice: 1950,
-    frontImage: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=800&q=80',
+    frontImage: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=600&q=75',
     backColor: '#C51D34',
     textColor: '#FFFFFF',
     numberColor: '#FFFFFF',
@@ -109,7 +110,7 @@ export const LAB_KITS = [
     name: 'Nepal Rhinos T20 Kit',
     category: 'Cricket',
     basePrice: 2200,
-    frontImage: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80',
+    frontImage: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=75',
     backColor: '#003893',
     textColor: '#FFFFFF',
     numberColor: '#FFFFFF',
@@ -172,7 +173,7 @@ export const SPORTS_CONFIG = {
         rating: 5.0,
         reviews: 130,
         badge: 'Nepal Pride',
-        image: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=600&q=75',
         description: 'Official Crimson Red & Deep Blue jersey of the Nepal National Football Team. Lightweight moisture-wicking fabric with national flag and emblem.',
         tags: ['National Pride', 'Bestseller in Nepal'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -212,7 +213,7 @@ export const SPORTS_CONFIG = {
         rating: 5.0,
         reviews: 84,
         badge: 'Mbappé #9',
-        image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=75',
         description: 'The historic new era kit in classic all-white with houndstooth pattern and gold accents. Includes official UEFA Champions League badges.',
         tags: ['Hot', 'Bestseller'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -232,7 +233,7 @@ export const SPORTS_CONFIG = {
         rating: 4.9,
         reviews: 55,
         badge: '125 Years',
-        image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=600&q=75',
         description: 'Celebratory half-and-half Blaugrana design paying tribute to the club’s founding year 1899 with centrally placed anniversary badge.',
         tags: ['Special Edition'],
         availableSizes: ['S', 'M', 'L', 'XL'],
@@ -252,7 +253,7 @@ export const SPORTS_CONFIG = {
         rating: 4.9,
         reviews: 92,
         badge: 'Messi #10',
-        image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=75',
         description: 'The iconic Flamingo Pink kit with Messi 10 official lettering and numbers. Premium aero-ready stretch fabric.',
         tags: ['Trending', 'Messi 10'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -265,7 +266,7 @@ export const SPORTS_CONFIG = {
     id: 'cricket',
     name: 'Cricket',
     ballImage: 'images/cricket-circle.jpg',
-    heroImage: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1200&q=85',
+    heroImage: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=700&q=75',
     heroTitle: ['ELITE', 'CRICKET', 'APPAREL'],
     heroSub: 'Official ICC World Cup and franchise kits engineered for Nepal Rhinos fans across the globe.',
     badge: 'Nepal Rhinos T20 World Cup Kits',
@@ -273,7 +274,7 @@ export const SPORTS_CONFIG = {
     secondaryColor: '#C51D34',
     provenance: 'ICC T20 WORLD CUP • OFFICIAL',
     promo: {
-      image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=75',
       heading: 'NEPAL RHINOS T20 WORLD CUP EDITION IN STOCK',
       buttonText: 'SHOP CRICKET',
       subtext: 'Get official name & number customized for Rohit Paudel, Dipendra Singh Airee, or your own squad name'
@@ -294,7 +295,7 @@ export const SPORTS_CONFIG = {
         rating: 5.0,
         reviews: 185,
         badge: 'Official T20 WC',
-        image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=75',
         description: 'The historic jersey worn by the Rhinos at the ICC T20 World Cup. Features the Mount Everest & Rhino motifs in rich navy and crimson.',
         tags: ['#1 Bestseller', 'Rhinos Pride'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -314,7 +315,7 @@ export const SPORTS_CONFIG = {
         rating: 4.9,
         reviews: 74,
         badge: 'Champions Edition',
-        image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=75',
         description: 'T20 World Cup winning jersey with tricolor collar highlights and dual star championship badge over the BCCI crest.',
         tags: ['Champions', 'Popular'],
         availableSizes: ['S', 'M', 'L', 'XL'],
@@ -334,7 +335,7 @@ export const SPORTS_CONFIG = {
         rating: 4.8,
         reviews: 63,
         badge: 'Dhoni #7',
-        image: 'https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&w=600&q=75',
         description: 'Vibrant yellow CSK match jersey featuring camouflage shoulder straps and Dhoni 7 signature numbering option.',
         tags: ['IPL Classic', 'Dhoni 7'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -354,7 +355,7 @@ export const SPORTS_CONFIG = {
         rating: 4.8,
         reviews: 58,
         badge: 'Kohli #18',
-        image: 'https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=75',
         description: 'The dynamic new red and royal blue colorway featuring the roaring lion crest and King Kohli 18 back print.',
         tags: ['Kohli 18', 'IPL'],
         availableSizes: ['S', 'M', 'L', 'XL'],
@@ -367,7 +368,7 @@ export const SPORTS_CONFIG = {
     id: 'basketball',
     name: 'Basketball',
     ballImage: 'images/basketball.jpg',
-    heroImage: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=85',
+    heroImage: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=700&q=75',
     heroTitle: ['VINTAGE', 'HOOP', 'HERITAGE'],
     heroSub: 'Authentic NBA swingman jerseys and vintage hardwood classics for true streetballers and collectors.',
     badge: 'Hardwood Classic NBA Swingman',
@@ -375,7 +376,7 @@ export const SPORTS_CONFIG = {
     secondaryColor: '#003893',
     provenance: 'NBA AUTHENTIC HARDWOOD',
     promo: {
-      image: 'https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=75',
       heading: 'NBA HARDWOOD CLASSICS & 2024 PLAYOFF KITS',
       buttonText: 'EXPLORE HOOPS',
       subtext: 'Double-knit mesh jerseys featuring heat-applied twill player names and numbers'
@@ -396,7 +397,7 @@ export const SPORTS_CONFIG = {
         rating: 4.9,
         reviews: 78,
         badge: 'LeBron #23',
-        image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=75',
         description: 'Classic Forum Gold mesh jersey with purple drop-shadow lettering. Breathable, sweat-wicking Nike Dri-FIT technology.',
         tags: ['King James', 'Bestseller'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -416,7 +417,7 @@ export const SPORTS_CONFIG = {
         rating: 5.0,
         reviews: 142,
         badge: 'MJ #23 GOAT',
-        image: 'https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=75',
         description: 'Mitchell & Ness quality heavyweight mesh jersey honoring the 72-10 historic championship season.',
         tags: ['Legendary', 'Must Have'],
         availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -436,7 +437,7 @@ export const SPORTS_CONFIG = {
         rating: 4.9,
         reviews: 88,
         badge: 'Curry #30',
-        image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=75',
         description: 'Royal blue jersey featuring the Bay Bridge crest with Curry 30 sharp typography and ribbed striped trims.',
         tags: ['Chef Curry', 'Popular'],
         availableSizes: ['S', 'M', 'L', 'XL'],
@@ -446,7 +447,6 @@ export const SPORTS_CONFIG = {
   }
 };
 
-// Full Master Store Schema
 export const MASTER_STORE_DATA = {
   ...SPORTS_CONFIG,
   retroArchives: RETRO_ARCHIVES,
@@ -454,14 +454,12 @@ export const MASTER_STORE_DATA = {
   labKits: LAB_KITS
 };
 
-// Available Nepal delivery zones
 export const NEPAL_REGIONS = [
   { id: 'bagmati-ktm', name: 'Kathmandu Valley (Kathmandu, Lalitpur, Bhaktapur)', fee: 100, eta: 'Same Day / 24 Hours' },
   { id: 'outside-ktm', name: 'Outside Kathmandu Valley (Pokhara, Butwal, Biratnagar, Chitwan, etc.)', fee: 180, eta: '2 - 3 Business Days' },
   { id: 'remote-nepal', name: 'Remote & Hill Districts (All Nepal Express Delivery)', fee: 250, eta: '3 - 5 Business Days' }
 ];
 
-// Payment Gateway Options with Nepali Flag accents
 export const PAYMENT_METHODS = [
   {
     id: 'esewa',

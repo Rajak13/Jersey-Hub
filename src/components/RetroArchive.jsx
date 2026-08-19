@@ -47,7 +47,9 @@ export default function RetroArchive({ sportsCatalog, onAddToCart, onQuickView }
               <div className="relative w-full aspect-[4/3] bg-[#F7F7F5] overflow-hidden">
                 <img 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={`${item.title} — ${item.era}`}
+                  loading="lazy"
+                  decoding="async" 
                   className="w-full h-full object-cover object-center"
                 />
               </div>
@@ -80,7 +82,7 @@ export default function RetroArchive({ sportsCatalog, onAddToCart, onQuickView }
                         ? 'bg-emerald-600 text-white' 
                         : 'border border-black/15 text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white hover:border-[#1A1A1A]'
                     }`}
-                    aria-label="Add to cart"
+                    aria-label={`Add ${item.title} to cart`}
                   >
                     {isAdded ? (
                       <Check className="w-3.5 h-3.5" />

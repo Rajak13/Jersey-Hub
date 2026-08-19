@@ -103,6 +103,8 @@ export default function JerseyCarousel({ activeSport, sportsCatalog, onQuickView
                 <img 
                   src={jersey.image} 
                   alt={jersey.name} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center"
                 />
               </div>

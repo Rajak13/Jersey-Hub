@@ -29,7 +29,9 @@ export default function CommunityWall({ sportsCatalog }) {
               <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-[#F7F7F5] mb-3.5">
                 <img 
                   src={post.image} 
-                  alt={post.kit || post.name} 
+                  alt={`Jersey Hub customer ${post.name} wearing ${post.kit} in ${post.location}, Nepal`}
+                  loading="lazy"
+                  decoding="async" 
                   className="w-full h-full object-cover"
                 />
               </div>
