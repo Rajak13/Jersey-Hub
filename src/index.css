@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   Custom Local Typography Fonts
+   ========================================================== */
+
+/* 1. Roxborough CF Regular — Editorial & Display Headings */
+@font-face {
+  font-family: 'Roxborough CF';
+  src: url('/fonts/roxborough-cf-regular.woff2') format('woff2'),
+       url('/fonts/roxborough-cf-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Architype Stedelijk — Bespoke Nantio Branding Mark Only */
+@font-face {
+  font-family: 'Architype Stedelijk';
+  src: url('/fonts/Architype Stedelijk W00.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Nepal Flag Primary Palette */
+    --nepal-crimson: #C51D34;
+    --nepal-crimson-dark: #A01528;
+    --nepal-navy: #003893;
+    --nepal-navy-dark: #002566;
+    --nepal-white: #FFFFFF;
+
+    /* Seamless Section Background Color Palette */
+    --bg-hero: #F5F4F0;
+    --bg-collection: #ECEBE6;
+    --bg-lab: #EAE9E4;
+    --bg-archive: #F5F4F0;
+    --bg-community: #EBEAE5;
+    --bg-footer: #E4E3DE;
+
+    --dark-text: #1A1A1A;
+    --subtext: #666666;
+    --card-bg: #FFFFFF;
+    --border-light: rgba(0, 0, 0, 0.06);
+  }
+
+  body {
+    background-color: var(--bg-hero);
+    color: var(--dark-text);
+    font-family: 'Outfit', 'Space Grotesk', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Default ~95% Zoom/Density requested by user */
+  #root {
+    zoom: 0.95;
+  }
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: 'Roxborough CF', Georgia, serif;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.font-body {
+  font-family: 'Outfit', -apple-system, sans-serif;
+}
+
+.font-nantio {
+  font-family: 'Architype Stedelijk', 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
