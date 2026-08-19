@@ -7,10 +7,10 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
   const currentSport = catalog[activeSport] || catalog.football || FALLBACK_SPORTS.football;
 
   return (
-    <section className="w-full grid grid-cols-1 lg:grid-cols-[480px_1fr] xl:grid-cols-[520px_1fr] gap-8 lg:gap-10 items-stretch pt-2 pb-8 sm:pb-12 px-2 sm:px-4 md:px-6 relative z-10 font-body">
+    <section className="w-full grid grid-cols-1 lg:grid-cols-[480px_1fr] xl:grid-cols-[520px_1fr] gap-8 lg:gap-10 items-start pt-2 pb-8 sm:pb-12 px-2 sm:px-4 md:px-6 relative z-10 font-body">
       
       {/* ============ LEFT EDITORIAL COLUMN ============ */}
-      <div className="flex flex-col justify-between h-full min-h-0 sm:min-h-[600px] lg:min-h-[640px] pt-2 sm:pt-4">
+      <div className="flex flex-col justify-between h-full min-h-0 sm:min-h-[580px] lg:min-h-[620px] pt-2 sm:pt-4">
         <div>
           {/* Quiet category label */}
           <span className="text-[10px] sm:text-[11px] font-medium text-[#888888] tracking-wide mb-3 sm:mb-5 block font-heading">
@@ -53,7 +53,7 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
         </div>
 
         {/* Promo Card */}
-        <div className="hidden sm:flex w-full max-w-[520px] h-[260px] lg:h-[297px] min-h-[260px] lg:min-h-[297px] max-h-[297px] bg-white rounded-2xl overflow-hidden items-stretch border border-black/[0.06] mt-6 lg:mt-auto shrink-0 select-none">
+        <div className="hidden sm:flex w-full max-w-[520px] h-[250px] lg:h-[280px] min-h-[250px] lg:min-h-[280px] max-h-[280px] bg-white rounded-2xl overflow-hidden items-stretch border border-black/[0.06] mt-6 lg:mt-auto shrink-0 select-none">
           {/* Left Image */}
           <div className="w-[55%] h-full relative overflow-hidden shrink-0">
             <img 
@@ -86,13 +86,13 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
 
       </div>
 
-      {/* ============ RIGHT HERO VISUAL ============ */}
-      <div className="relative w-full h-full flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
-        <div className="relative w-full max-w-[780px] aspect-[780/828] select-none">
+      {/* ============ RIGHT HERO VISUAL (LOCKED TO SVG VIEWBOX RATIO) ============ */}
+      <div className="w-full flex items-start justify-center lg:justify-end mt-4 lg:mt-0">
+        <div className="relative w-full max-w-[780px] aspect-[780/828] select-none shrink-0 overflow-hidden">
           
           {/* SVG Frame with Exact Boolean Subtract Mask from Figma */}
           <svg 
-            className="w-full h-full block overflow-visible" 
+            className="w-full h-full block" 
             viewBox="0 0 780 828" 
             preserveAspectRatio="xMidYMid meet" 
             xmlns="http://www.w3.org/2000/svg"
@@ -128,19 +128,19 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
             </g>
           </svg>
 
-          {/* Top-Right Arrow Circle */}
+          {/* Top-Right Arrow Circle (Anchored to SVG top-right corner) */}
           <button 
             type="button"
             onClick={onExploreClick}
-            className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-white flex items-center justify-center z-20 transition-transform duration-200 hover:rotate-45 cursor-pointer group border border-black/[0.06] shadow-xs"
+            className="absolute top-0 right-0 w-[10%] min-w-[36px] max-w-[90px] aspect-square rounded-full bg-white flex items-center justify-center z-20 transition-transform duration-200 hover:rotate-45 cursor-pointer group border border-black/[0.06] shadow-xs"
             aria-label="View Collection"
           >
-            <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1A1A1A]" strokeWidth={1.8} />
+            <ArrowUpRight className="w-1/2 h-1/2 text-[#1A1A1A]" strokeWidth={1.8} />
           </button>
 
-          {/* Lower-Left Sport Selector Balls */}
+          {/* Lower-Left Sport Selector Balls (Anchored precisely to the 3 Figma carved notch holes at bottom left!) */}
           <div 
-            className="absolute left-[12px] bottom-[12px] flex flex-col gap-1.5 sm:gap-2 z-20"
+            className="absolute left-[1.5%] bottom-[3.5%] flex flex-col gap-[2%] z-20"
             role="tablist"
             aria-label="Choose Sport Category"
           >
@@ -152,7 +152,7 @@ export default function HeroSection({ activeSport, sportsCatalog, onSelectSport,
                   key={sportKey}
                   type="button"
                   onClick={() => onSelectSport(sportKey)}
-                  className={`w-14 h-14 sm:w-16 sm:h-16 md:w-[74px] md:h-[74px] rounded-full overflow-hidden border-[2.5px] sm:border-[3px] transition-all duration-200 cursor-pointer shadow-xs ${
+                  className={`w-[11.5vw] max-w-[80px] min-w-[32px] aspect-square rounded-full overflow-hidden border-[2px] sm:border-[3px] transition-all duration-200 cursor-pointer shadow-xs ${
                     isActive 
                       ? 'border-[#1A1A1A] scale-105 opacity-100 ring-2 ring-white/80' 
                       : 'border-transparent opacity-75 hover:opacity-100'
